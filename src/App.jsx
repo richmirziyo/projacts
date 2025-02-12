@@ -35,6 +35,105 @@ const App = () => {
         "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png",
       ],
     },
+    {
+      id: 4,
+      title: "Essence Mascara Lash Princess",
+      description:
+        "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      category: "beauty",
+      price: 9.99,
+      images: [
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+      ],
+    },
+    {
+      id: 5,
+      title: "Eyeshadow Palette with Mirror",
+      description:
+        "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+      category: "beauty",
+      price: 19.99,
+      images: [
+        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png",
+      ],
+    },
+    {
+      id: 6,
+      title: "Powder Canister",
+      description:
+        "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+      category: "beauty",
+      price: 14.99,
+      images: [
+        "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png",
+      ],
+    },
+    {
+      id: 7,
+      title: "Essence Mascara Lash Princess",
+      description:
+        "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      category: "beauty",
+      price: 9.99,
+      images: [
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+      ],
+    },
+    {
+      id: 8,
+      title: "Eyeshadow Palette with Mirror",
+      description:
+        "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+      category: "beauty",
+      price: 19.99,
+      images: [
+        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png",
+      ],
+    },
+    {
+      id: 9,
+      title: "Powder Canister",
+      description:
+        "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+      category: "beauty",
+      price: 14.99,
+      images: [
+        "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png",
+      ],
+    },
+    {
+      id: 10,
+      title: "Essence Mascara Lash Princess",
+      description:
+        "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      category: "beauty",
+      price: 9.99,
+      images: [
+        "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
+      ],
+    },
+    {
+      id: 11,
+      title: "Eyeshadow Palette with Mirror",
+      description:
+        "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+      category: "beauty",
+      price: 19.99,
+      images: [
+        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png",
+      ],
+    },
+    {
+      id: 12,
+      title: "Powder Canister",
+      description:
+        "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+      category: "beauty",
+      price: 14.99,
+      images: [
+        "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png",
+      ],
+    },
   ]);
 
   const deleteBtn = (id) => {
@@ -42,14 +141,16 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Prodacts</h1>
-      {products.length == 0 && <h2>You don't have any products yet !</h2>}
+      {products.length == 0 && (
+        <h2 className="not">You don't have any products yet !</h2>
+      )}
       <ul>
         {products.map((product) => {
           return (
-            <li key={product.id}>
-              <img src={product.images[0]} alt="" width={200} />
+            <li className="product-li" key={product.id}>
+              <img src={product.images[0]} alt="" width={200} height={200} />
               <h2>{product.title}</h2>
               <p>Category: {product.category}</p>
               <button onClick={() => deleteBtn(product.id)}>Delete</button>
